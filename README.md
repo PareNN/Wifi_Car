@@ -12,4 +12,4 @@ D8 - B2 управление мотором A влево вправо
 
 Написано с помощью GyverHub - Панель управления для esp8266, esp32 и других Arduino. Конструктор интерфейса, интеграция в умный дом.
 
-Приложение для управления https://github.com/GyverLibs/GyverHub-app/releases/latest
+Приложение для управления на андроид https://github.com/GyverLibs/GyverHub-app/releases/latest
