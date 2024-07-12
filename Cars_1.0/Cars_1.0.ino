@@ -1,33 +1,25 @@
 /*
   Wifi управление машинкой Модуль MX1508 
-
-
 */
 
-#define F_pin 5
-#define B_pin 6
-#define L_pin 7
-#define R_pin 8
-
-
-/*
-#define F_pin 21
-#define B_pin 22
-#define L_pin 23
-#define R_pin 25
-*/
+#define F_pin 14      //Пин D5
+#define B_pin 12      //Пин D6
+#define L_pin 13      //Пин D7
+#define R_pin 15      //Пин D8
 
 #define DEBUG_SERIAL  //Закомментируй чтобы выключить отладку (скорость 115200)
 // #define Start_Mode    //Закоментируй после первой прошивки
 
 
-
+#ifdef ESP8266
+#include <ESP8266WiFi.h>
+#endif
 #include <EEPROM.h>
 #include "Data.h"  // данные
 #include <GyverTimer.h>
 GTimer Timer_connect(MS, 300000);
 #include <GyverHub.h>
-GyverHub hub("Cars", "ESP8266", "");  // префикс, имя, иконка
+GyverHub hub("MyDevices", "ESP8266_Car", "");  // префикс, имя, иконка
 // GyverHub hub;
 gh::Pos pos1, pos2;
 
